@@ -21,6 +21,8 @@ jobs:
         run: npm run lint
   # name of JOB-2
   test:
+    #needs keyword to execute jobs sequentially
+    needs: lint
     #specify runner for the job
     runs-on: ubuntu-latest
     #Steps
@@ -36,6 +38,7 @@ jobs:
         run: npm run test
   # name of JOB-3
   deploy:
+    needs: [lint, test]
     #specify runner for the job
     runs-on: ubuntu-latest
     #Steps
