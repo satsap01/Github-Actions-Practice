@@ -27,4 +27,4 @@ jobs:
         run: npm run build
       #STEP-6
       - name: Deploy Code
-        run: echo "Deploying..."
+        run: echo "Deploying...."
